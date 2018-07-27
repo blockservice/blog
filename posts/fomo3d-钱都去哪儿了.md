@@ -95,7 +95,7 @@ potSplit_[3] = F3Ddatasets.PotSplit(30,10);  //48% to winner, 10% to next round,
 - 矿工在背后偷着乐
 - 你们谁知道TeamJust的下个游戏的合约地址么？ 我知道！！！
 
-如果还有谁知道可以加我微信`yiyemeishui`，加好友时请输入TeamJust的下个游戏合约地址，我们一起来票大的。。。
+如果你也找到了，可以加我微信`yiyemeishui`， 加好友时请输入TeamJust的下个游戏合约地址，我们一起来票大的。。。
 
 
 推荐阅读：
