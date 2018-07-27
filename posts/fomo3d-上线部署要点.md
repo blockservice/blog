@@ -17,7 +17,7 @@ fomo3d游戏一出，国内疯狂clone上线，这里谈下我上线的方法（
 
 其实这个游戏本身只需要2个合约就可以跑起来，且没实质影响，只是单纯改变了部分利益分配方式。
 
-下面说明，我尽可能少改动原版的情况下，部署上线合约，合约代码[在这里](https://github.com/ChungkueiBlock/sols/fomo3d)
+下面说明，我尽可能少改动原版的情况下，部署上线合约，修改后的原版合约代码[在这里](https://github.com/ChungkueiBlock/sols/tree/master/fomo3d)
 
 ## 部署前的准备
 
@@ -51,7 +51,7 @@ fomo3d游戏一出，国内疯狂clone上线，这里谈下我上线的方法（
 
 按先后顺序如下部署
 
-1. [p3d合约](https://github.com/ChungkueiBlock/sols/fomo3d/Hourglass.sol)
+1. [p3d合约](https://github.com/ChungkueiBlock/sols/blob/master/fomo3d/Hourglass.sol)
 
 真心不推荐部署带有p3d合约的游戏，这样项目方就可以吃掉本来要流到这里25%左右的流水资金了
 
@@ -77,7 +77,7 @@ fomo3d游戏一出，国内疯狂clone上线，这里谈下我上线的方法（
 3. ~~部署JIincForwarder合约~~
 
 这个合约是管理流向社区2%的资金的，被fomo3dlong里调用，
-这里需要hack，因为其中涉及到一个闭源的合约，既然知道它是管理2%资金流向的，那直接如下hack
+这里需要hack，因为其中涉及到一个闭源的合约，既然知道它是管理2%资金流向的，那直接在fomo3dLong的合约如下hack
 
 - 把定义`Jekyll_Island_Inc`的地方，直接定义成一个普通地址 `address reward = 0xxxxxxx;`
 - 把调用Jekyll_Island_Inc的地方， 写成`reward.transfer(_com);`， 注意有两个地方调用（都要换），一个是游戏进行时调用，一个是本轮结束后调用
