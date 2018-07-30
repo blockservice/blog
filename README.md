@@ -9,6 +9,9 @@
 
 * [以太坊交易的处理过程上篇](/posts/ethereum_handle_tx_1.md)
 
+
+* [ecoinWallet为什么选择React-Native](/posts/why_choose_rn.md)
+
 所有的blog详见[posts](/posts)目录 ...
 
 有任何想讨论的问题，欢迎建立issue来探讨
