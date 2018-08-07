@@ -97,9 +97,3 @@ potSplit_[3] = F3Ddatasets.PotSplit(30,10);  //48% to winner, 10% to next round,
 
 如果你也找到了，可以加我微信`yiyemeishui`， 加好友时请输入TeamJust的下个游戏合约地址，我们一起来票大的。。。
 
-
-推荐阅读：
-    
-- [fomo3d-P3d的解读](/posts/fomo3d-p3d的解读.md)
-- [fomo3d-背后团队的野心](/posts/fomo3d-TeamJust的野心.md)
-- [fomo3d-二次开发上线流程](/posts/fomo3d-二次开发上线流程.md)
