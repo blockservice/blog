@@ -6,7 +6,8 @@
 * [fomo3d-上线部署要点](/posts/fomo3d-上线部署要点.md)
 * [fomo3d-全部前后端源码公开](https://github.com/ChungkueiBlock/fomo3d)
 * [fomo3d-赢大奖的机器人](https://github.com/ChungkueiBlock/tools/tree/master/nativeDapps)
-* [以太坊交易的处理过程上篇](/posts/ethereum_handle_tx_1.md)
+* [以太坊-交易的处理过程上篇](/posts/ethereum_handle_tx_1.md)
+* [以太坊-交易的处理过程下篇](/posts/ethereum_handle_tx_2.md)
 * [ecoinWallet为什么选择React-Native](/posts/why_choose_rn.md)
 
 所有的blog详见[posts](/posts)目录 ...
