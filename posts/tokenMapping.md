@@ -3,7 +3,7 @@
 第一种是需要一个可以提供rpc服务访问的full node，然后attach到他的console或者用http or https方法从远端通过网络访问，执行第一个nodejs脚本即可以获取所有关于这个合约的holder地址。
 优点：可信性高，所有交易记录和地址余额都是从链上直接获取。
 缺点：速度相对较慢，我在4Core 8G的阿里云上大概1秒钟遍历一个块（实际速度视块的大小及网络带宽而定）
-
+```
 var Web3 = require("web3");
 var fs = require('fs');
 var web3 =new Web3();
@@ -78,12 +78,12 @@ function run (){
 var fileName = process.argv[2];
 var metacoin = web3.eth.contract(abi).at(contractAddress);
 run();
-
+```
 第二种是利用https://etherscan.io提供的api，提取所有关于这个token的tx，然后根据tx的input参数得到每一笔转账的参数中的to的部分，也就是账户地址，然后运行web3接口跟据账户地址去调用合约里的balanceof 方法最后得到每个账户的余额
 优点：速度快，4000多个tx大概8分钟左右就可以算出余额
 缺点：tx来源于第三方，不是直接从链上读数据，可信性值得商榷。
 下面就是两种方法的具体实现：
-
+```
 var URL = "http://api.etherscan.io/api?module=account&action=txlist&address=0x0a25c807291e58716ab78752f8bb15eae8370e7d&startblock=0&endblock=99999999&sort=asc&apikey=FXHHTPFXJPKAIIZ35WQZSIJRXQG4KMIJZZ"
 //wget "http://api.etherscan.io/api?module=account&action=txlist&address=0x0a25c807291e58716ab78752f8bb15eae8370e7d&startblock=0&endblock=99999999&sort=asc&apikey=FXHHTPFXJPKAIIZ35WQZSIJRXQG4KMIJZZ" -o tx.lst
 var request = require("request");
@@ -123,3 +123,4 @@ for(var n = 0; n < lines.length; n++) {
 
   }
 });
+```
