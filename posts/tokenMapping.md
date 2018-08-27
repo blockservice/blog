@@ -1,4 +1,4 @@
-谈到token的映射，这是一个在实际当中比较容易遇到的问题，即在以太的ERC20中发放代币，然后待公链上线后，从ERC20的token中把已经发放的代币映射到主网上面。
+  谈到token的映射，这是一个在实际当中比较容易遇到的问题，即在以太的ERC20中发放代币，然后待公链上线后，从ERC20的token中把已经发放的代币映射到主网上面。
 这里一共谈论了两种方法，其实有第三种，具体我们后面在讲。
 第一种是需要一个可以提供rpc服务访问的full node，然后attach到他的console或者用http or https方法从远端通过网络访问，执行第一个nodejs脚本即可以获取所有关于这个合约的holder地址。
 优点：可信性高，所有交易记录和地址余额都是从链上直接获取。
@@ -84,7 +84,7 @@ run();
 缺点：tx来源于第三方，不是直接从链上读数据，可信性值得商榷。
 下面就是两种方法的具体实现：
 ```
-var URL = "http://api.etherscan.io/api?module=account&action=txlist&address=0x0a25c807291e58716ab78752f8bb15eae8370e7d&startblock=0&endblock=99999999&sort=asc&apikey=FXHHTPFXJPKAIIZ35WQZSIJRXQG4KMIJZZ"
+var URL = "http://api.etherscan.io/api?module=account&action=txlist&address=0x0a25c807291e58716ab78752f8bb15eae8370e7d&startblock=0&endblock=99999999&sort=asc&apikey=FXHHTPFXJPKAI1IZ35WQZSIJQG4KMIJZZ" //apikey是你在etherscan上的apikey，这个key需要自己去申请，如果发现访问异常，尝试翻墙
 //wget "http://api.etherscan.io/api?module=account&action=txlist&address=0x0a25c807291e58716ab78752f8bb15eae8370e7d&startblock=0&endblock=99999999&sort=asc&apikey=FXHHTPFXJPKAIIZ35WQZSIJRXQG4KMIJZZ" -o tx.lst
 var request = require("request");
 var fs = require('fs');
